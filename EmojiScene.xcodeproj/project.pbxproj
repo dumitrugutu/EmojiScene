@@ -54,14 +54,22 @@
 		B5A1C43C1FE5C33E00448F68 /* EmojiScene */ = {
 			isa = PBXGroup;
 			children = (
-				B5A1C43D1FE5C33E00448F68 /* AppDelegate.swift */,
 				B5A1C43F1FE5C33E00448F68 /* ViewController.swift */,
 				B5A1C4411FE5C33E00448F68 /* Main.storyboard */,
-				B5A1C4441FE5C33E00448F68 /* Assets.xcassets */,
-				B5A1C4461FE5C33E00448F68 /* LaunchScreen.storyboard */,
 				B5A1C4491FE5C33E00448F68 /* Info.plist */,
+				B5A1C44F1FE5C37F00448F68 /* Supporting Files */,
 			);
 			path = EmojiScene;
+			sourceTree = "<group>";
+		};
+		B5A1C44F1FE5C37F00448F68 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B5A1C43D1FE5C33E00448F68 /* AppDelegate.swift */,
+				B5A1C4441FE5C33E00448F68 /* Assets.xcassets */,
+				B5A1C4461FE5C33E00448F68 /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
