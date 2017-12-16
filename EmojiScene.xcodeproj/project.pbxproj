@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		B5A1C43E1FE5C33E00448F68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A1C43D1FE5C33E00448F68 /* AppDelegate.swift */; };
-		B5A1C4401FE5C33E00448F68 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A1C43F1FE5C33E00448F68 /* ViewController.swift */; };
+		B5A1C4401FE5C33E00448F68 /* EmojiSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A1C43F1FE5C33E00448F68 /* EmojiSceneViewController.swift */; };
 		B5A1C4431FE5C33E00448F68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5A1C4411FE5C33E00448F68 /* Main.storyboard */; };
 		B5A1C4451FE5C33E00448F68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5A1C4441FE5C33E00448F68 /* Assets.xcassets */; };
 		B5A1C4481FE5C33E00448F68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5A1C4461FE5C33E00448F68 /* LaunchScreen.storyboard */; };
+		B5A1C4511FE5C5F300448F68 /* EmojiSceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A1C4501FE5C5F300448F68 /* EmojiSceneView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B5A1C43A1FE5C33E00448F68 /* EmojiScene.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmojiScene.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5A1C43D1FE5C33E00448F68 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B5A1C43F1FE5C33E00448F68 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B5A1C43F1FE5C33E00448F68 /* EmojiSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiSceneViewController.swift; sourceTree = "<group>"; };
 		B5A1C4421FE5C33E00448F68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B5A1C4441FE5C33E00448F68 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B5A1C4471FE5C33E00448F68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B5A1C4491FE5C33E00448F68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5A1C4501FE5C5F300448F68 /* EmojiSceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiSceneView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,10 +56,11 @@
 		B5A1C43C1FE5C33E00448F68 /* EmojiScene */ = {
 			isa = PBXGroup;
 			children = (
-				B5A1C43F1FE5C33E00448F68 /* ViewController.swift */,
+				B5A1C43F1FE5C33E00448F68 /* EmojiSceneViewController.swift */,
+				B5A1C4501FE5C5F300448F68 /* EmojiSceneView.swift */,
 				B5A1C4411FE5C33E00448F68 /* Main.storyboard */,
-				B5A1C4491FE5C33E00448F68 /* Info.plist */,
 				B5A1C44F1FE5C37F00448F68 /* Supporting Files */,
+				B5A1C4491FE5C33E00448F68 /* Info.plist */,
 			);
 			path = EmojiScene;
 			sourceTree = "<group>";
@@ -144,7 +147,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5A1C4401FE5C33E00448F68 /* ViewController.swift in Sources */,
+				B5A1C4401FE5C33E00448F68 /* EmojiSceneViewController.swift in Sources */,
+				B5A1C4511FE5C5F300448F68 /* EmojiSceneView.swift in Sources */,
 				B5A1C43E1FE5C33E00448F68 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
