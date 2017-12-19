@@ -9,44 +9,39 @@
 import UIKit
 
 class EmojiSceneDocumentTableViewController: UITableViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    
+    struct Constants {
+        static let documentCellIdentifier = "DocumentCell"
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    
+    var emojiSceneDocuments = ["One", "Two", "Three"]
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return emojiSceneDocuments.count
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.documentCellIdentifier, for: indexPath)
+        
+        cell.textLabel?.text = emojiSceneDocuments[indexPath.row]
 
         return cell
     }
-    */
 
+    @IBAction func newEmojiScene(_ sender: UIBarButtonItem) {
+        emojiSceneDocuments += ["Untitled".madeUnique(withRespectTo: emojiSceneDocuments)]
+        tableView.reloadData()
+    }
+    
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
