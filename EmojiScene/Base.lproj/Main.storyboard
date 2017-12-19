@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dxn-7H-Iwe">
+    <device id="ipad9_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -10,19 +10,95 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="9cV-Og-q50">
+            <objects>
+                <viewController id="MNU-hw-lFO" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Bxb-GE-OV2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="WSz-kl-q3N"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="NtJ-f0-5ts"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8eQ-eX-UlV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="882" y="-616"/>
+        </scene>
         <!--Emoji Scene View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="EmojiSceneViewController" customModule="EmojiScene" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Du3-is-3a0">
+                                <rect key="frame" x="0.0" y="20" width="1024" height="748"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QAv-96-MrM" customClass="EmojiSceneView" customModule="EmojiScene" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="748"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="QAv-96-MrM" firstAttribute="top" secondItem="Du3-is-3a0" secondAttribute="top" id="220-9A-Qy1"/>
+                                    <constraint firstAttribute="bottom" secondItem="QAv-96-MrM" secondAttribute="bottom" id="6Tb-cH-Y6n"/>
+                                    <constraint firstItem="QAv-96-MrM" firstAttribute="leading" secondItem="Du3-is-3a0" secondAttribute="leading" id="81d-NF-Gsh"/>
+                                    <constraint firstAttribute="trailing" secondItem="QAv-96-MrM" secondAttribute="trailing" id="x8F-PI-mMc"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Du3-is-3a0" secondAttribute="trailing" id="SlV-Xz-CDt"/>
+                            <constraint firstItem="Du3-is-3a0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="UvB-Ky-hdq"/>
+                            <constraint firstItem="Du3-is-3a0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dpH-6c-ewP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Du3-is-3a0" secondAttribute="bottom" id="yN9-NP-kyf"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="dropZone" destination="Du3-is-3a0" id="cVp-Fa-gD7"/>
+                        <outlet property="emojiSceneView" destination="QAv-96-MrM" id="nQB-rP-5PG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="60" y="358"/>
+        </scene>
+        <!--Split View Controller-->
+        <scene sceneID="7As-ZK-KTN">
+            <objects>
+                <splitViewController id="dxn-7H-Iwe" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="showDetail" id="G4x-dp-cIg"/>
+                        <segue destination="7im-Ti-bpR" kind="relationship" relationship="masterViewController" id="4ao-AP-kz7"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RX6-GZ-yVY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-774" y="91"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="769-6U-fGF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7im-Ti-bpR" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Jcg-fJ-d3g">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="MNU-hw-lFO" kind="relationship" relationship="rootViewController" id="R0d-bT-hzq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yPO-n4-8ez" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="60" y="-616"/>
         </scene>
     </scenes>
 </document>

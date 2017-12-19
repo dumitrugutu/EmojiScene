@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B58F003E1FE98ADA007FA9B9 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58F003D1FE98ADA007FA9B9 /* Utilities.swift */; };
 		B5A1C43E1FE5C33E00448F68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A1C43D1FE5C33E00448F68 /* AppDelegate.swift */; };
 		B5A1C4401FE5C33E00448F68 /* EmojiSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A1C43F1FE5C33E00448F68 /* EmojiSceneViewController.swift */; };
 		B5A1C4431FE5C33E00448F68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5A1C4411FE5C33E00448F68 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B58F003D1FE98ADA007FA9B9 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		B5A1C43A1FE5C33E00448F68 /* EmojiScene.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmojiScene.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5A1C43D1FE5C33E00448F68 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5A1C43F1FE5C33E00448F68 /* EmojiSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiSceneViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 			children = (
 				B5A1C43F1FE5C33E00448F68 /* EmojiSceneViewController.swift */,
 				B5A1C4501FE5C5F300448F68 /* EmojiSceneView.swift */,
+				B58F003D1FE98ADA007FA9B9 /* Utilities.swift */,
 				B5A1C4411FE5C33E00448F68 /* Main.storyboard */,
 				B5A1C44F1FE5C37F00448F68 /* Supporting Files */,
 				B5A1C4491FE5C33E00448F68 /* Info.plist */,
@@ -149,6 +152,7 @@
 			files = (
 				B5A1C4401FE5C33E00448F68 /* EmojiSceneViewController.swift in Sources */,
 				B5A1C4511FE5C5F300448F68 /* EmojiSceneView.swift in Sources */,
+				B58F003E1FE98ADA007FA9B9 /* Utilities.swift in Sources */,
 				B5A1C43E1FE5C33E00448F68 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
