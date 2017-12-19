@@ -8,10 +8,10 @@
 
 import UIKit
 
-class EmojiSceneViewController: UIViewController
-{
+class EmojiSceneViewController: UIViewController, UIScrollViewDelegate {
     
     var imageFetcher: ImageFetcher!
+    var emojiSceneView = EmojiSceneView()
     
     @IBOutlet weak var dropZone: UIView! {
         didSet {
@@ -19,9 +19,34 @@ class EmojiSceneViewController: UIViewController
         }
     }
     
+    @IBOutlet weak var scrollView: UIScrollView! {
+        didSet {
+            scrollView.maximumZoomScale = 0.1
+            scrollView.maximumZoomScale = 5.0
+            scrollView.delegate = self
+            scrollView.addSubview(emojiSceneView)
+        }
+    }
     
-    @IBOutlet weak var emojiSceneView: EmojiSceneView!
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        return emojiSceneView
+    }
     
+    var emojiSceneBackgroundImage: UIImage? {
+        get {
+            return emojiSceneView.backgroundImage
+        }
+        set {
+            scrollView?.zoomScale = 1.0
+            emojiSceneView.backgroundImage = newValue
+            let size = newValue?.size ?? CGSize.zero
+            emojiSceneView.frame = CGRect(origin: CGPoint.zero, size: size)
+            scrollView?.contentSize = size
+            if let dropZone = self.dropZone, size.width > 0, size.height > 0 {
+                scrollView?.zoomScale = max(dropZone.bounds.size.width / size.width, dropZone.bounds.size.height / size.height)
+            }
+        }
+    }
 }
 
 //MARK: - UI Drop Interaction Delegate
@@ -38,7 +63,7 @@ extension EmojiSceneViewController: UIDropInteractionDelegate {
     func dropInteraction(_ interaction: UIDropInteraction, performDrop session: UIDropSession) {
         imageFetcher = ImageFetcher() { (url, image) in
             DispatchQueue.main.async {
-                self.emojiSceneView.backgroundImage = image
+                self.emojiSceneBackgroundImage = image
             }
             
         }
