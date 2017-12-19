@@ -1,2 +1,3 @@
 # EmojiScene
-A fun drag and drop emoji app for iPad.
+
+A fun drag and drop iOS emoji app from Stanford Univerity.
